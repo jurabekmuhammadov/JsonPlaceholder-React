@@ -1,0 +1,48 @@
+@use "../abstracts" as *;
+
+.albums__container {
+  padding: 10px 20px 30px;
+  margin-bottom: 100px;
+  @include flexbox(column, start, start);
+  gap: 15px;
+
+  .album-card {
+    width: 100%;
+    padding: 20px;
+    background-color: #7800ac97;
+    border-radius: 15px;
+    @include flexbox(column, start, start);
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #650090;
+    }
+
+    p {
+      color: white;
+      text-transform: capitalize;
+    }
+
+    button {
+      background-color: #eaeaea;
+      margin-top: 20px;
+      padding: 2px 10px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      border: none;
+
+      a {
+        text-decoration: none;
+        color: #ff0000;
+        font-weight: 500;
+
+      }
+
+      &:hover {
+        transform: translateX(10px);
+      }
+    }
+  }
+}

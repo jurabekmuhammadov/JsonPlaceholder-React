@@ -1,0 +1,78 @@
+@use "../abstracts" as *;
+
+.users__container {
+  margin-bottom: 100px;
+  padding: 10px 20px 30px;
+  @include grid(4, 15px);
+
+  .card {
+    padding: 10px;
+    background-color: #a8beff;
+    border-radius: 10px;
+    @include flexbox(column, space-between, none);
+    gap: 5px;
+
+    .names {
+      h3 {
+        color: #4a007b;
+      }
+
+      h4 {
+        color: white;
+      }
+    }
+
+    .user-address {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    .bottom {
+      margin-top: 15px;
+      @include flexbox(row, space-between, center);
+
+      button {
+        border: none;
+        border-radius: 10px;
+        background-color: #eaeaea;
+        width: 30%;
+        padding: 3px 0;
+        transition: 0.3s;
+        @include flexbox(row, center, center);
+        cursor: pointer;
+
+        a {
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          color: #ff0000;
+          font-weight: 500;
+          font-size: 16px;
+        }
+
+        &:hover {
+          transform: translateY(-10px);
+        }
+      }
+    }
+  }
+
+  @include media(1050px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media(850px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media(550px) {
+    grid-template-columns: 1fr;
+
+  }
+}

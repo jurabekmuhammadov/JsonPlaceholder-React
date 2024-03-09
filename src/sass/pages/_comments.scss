@@ -1,0 +1,36 @@
+@use "../abstracts" as *;
+
+.comments__container {
+  margin-bottom: 100px;
+  padding: 10px 20px 30px;
+  @include flexbox(column, start, start);
+  gap: 15px;
+
+  .comment-card {
+    width: 100%;
+    padding: 20px;
+    background-color: #7800ac97;
+    border-radius: 15px;
+    @include flexbox(column, start, start);
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #650090;
+    }
+
+    h4 {
+      color: rgb(255, 123, 0);
+      text-transform: capitalize;
+      margin-bottom: 10px;
+    }
+
+    h5 {
+      color: rgb(37, 219, 0);
+    }
+
+    p {
+      color: white;
+    }
+  }
+}

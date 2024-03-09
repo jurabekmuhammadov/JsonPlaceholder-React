@@ -1,0 +1,62 @@
+@use "../abstracts" as *;
+
+#gallery {
+  margin-bottom: 100px;
+
+  .gallery__container {
+    padding: 10px 20px 30px;
+    @include grid(4, 15px);
+    gap: 15px;
+
+    .photos-card {
+      @include flexbox(column, start, start);
+      background-color: #ffffff;
+      border-radius: 15px;
+      transition: 0.3s;
+      border: none;
+      cursor: pointer;
+
+      p {
+        color: black;
+        margin: 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      img {
+        width: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    span {
+      font-size: 18px;
+      color: white;
+      font-weight: 600;
+    }
+
+    button {
+      border-radius: 10px;
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+header {
+  padding: 10px 0;
+  @include flexbox(row, center, center);
+
+  h1 {
+    color: white;
+    font-family: "Acme", sans-serif;
+    font-size: 45px;
+    letter-spacing: 1px;
+  }
+
+  @include media(500px) {
+    h1 {
+      font-size: 36px !important;
+    }
+  }
+}
