@@ -14,7 +14,6 @@ const Todos = () => {
         .get(`https://jsonplaceholder.typicode.com/todos?userId=${id}`)
         .then((response) => {
           setTodos(response.data);
-          console.log(response.data);
         })
         .catch((err) => {
           console.log(err.message);
